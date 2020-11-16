@@ -1,0 +1,77 @@
+[user]
+    name = jakubfil
+    email = jakub.filip@intel.com
+[core]
+    editor = vim
+    autocrlf = false
+    hooksPath = githooks
+    whitespace = cr-at-eol
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+    keepBackup = false
+[alias]
+    # STATUS
+    stat = status
+    st = status
+    
+    # LOG
+    l = log --graph --abbrev-commit --decorate
+    l1 = log -1 -p
+    l2 = log -2 -p
+    l3 = log -3 -p
+    l4 = log -4 -p
+    l5 = log -5 -p
+    tree = log --graph --abbrev-commit --decorate --date=relative --all
+    treec = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    in = !git fetch && git log --pretty=oneline --abbrev-commit --graph ..@{u}
+    out = log --pretty=oneline --abbrev-commit --graph @{u}..
+    sum = summary = show -s
+    root = rev-parse --show-toplevel
+    
+    # WORKFLOW
+    f = fetch
+    m = merge
+    mi = merge origin/integration
+    p = pull
+    pi = pull origin integration
+    co = checkout
+    coi = checkout origin/integration
+    cor = checkout -t
+    ci = commit
+    ps = push
+    pu = push
+    
+    # WORKING TREE
+    unstage = reset HEAD --
+    
+    # BRANCH
+    br = branch
+    # Delete all local branches but master and the current one.
+    brcl = "!f(){\
+        git branch | grep -v "master" | grep -v ^* | xargs git branch -D;\
+    }; f"
+    br-clean = "!f(){\
+        git branch | grep -v "master" | grep -v ^* | xargs git branch -D;\
+    }; f"
+    
+    # CONFIG
+    alls = config --global --list
+    al-list = config --global --list
+    cfed = config --global --edit
+    cf = config --global
+    ce = config --edit
+    c = config
+        
+    # TOOLS
+    dt = difftool --dir-diff
+    dif = diff
+    mt = mergetool	
+    
+    # NEW
+    fetch = fetch
