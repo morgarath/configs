@@ -1,0 +1,60 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+alt+t",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+shift+alt+t",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.action.focusLastEditorGroup"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "gitlens.toggleFileBlame"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "gitlens.toggleLineBlame",
+        "when": "!searchViewletFocus"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "python.datascience.createnewnotebook"
+    },
+    {   "key": "ctrl+alt+f",         
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly" 
+    },
+    {   "key": "ctrl+alt+c",         
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "workbench.action.togglePanel"
+    },
+]

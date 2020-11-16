@@ -1,0 +1,149 @@
+{
+    "workbench.list.openMode": "singleClick",
+    "workbench.editor.enablePreview": true,
+    "editor.rulers": [80, 120],
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "files.autoSave": "afterDelay",
+    "telemetry.enableTelemetry": false,
+    "http.proxy": "proxy",
+    "http.proxySupport": "on",
+    "explorer.confirmDelete": false,
+
+    "gitlens.codeLens.scopes": [
+        "containers",
+        "blocks",
+        "document"
+    ],
+    "gitlens.hovers.annotations.over": "annotation",
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.fileHistory.location": "explorer",
+    "gitlens.views.lineHistory.location": "explorer",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "gitlens.blame.format": "${author|8}: ${date|9}; ${ago|10}",
+    "gitlens.blame.highlight.locations": [
+        "line",
+        "gutter",
+        "overview"
+    ],
+    "gitlens.defaultDateFormat": "DD MMM YY",
+    "gitlens.defaultDateShortFormat": "DD MMM YY",
+    "gitlens.menus": {
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "details": false,
+            "history": false,
+            "remote": false
+        },
+        "editorGroup": {
+            "blame": true,
+            "compare": true
+        },
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true,
+            "stashInline": true
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true,
+            "stash": true
+        }
+    },
+
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    "gitlens.blame.toggleMode": "window",
+    "git.enableSmartCommit": true,
+    "gitlens.views.search.files.layout": "tree",
+    "remote.SSH.remotePlatform": {
+        "qemu_tsim_vm1_temp": "linux",
+        "jakubfil-tb2": "linux",
+        "vm_qemu_tsim": "linux"
+    },
+    "python.showStartPage": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.watcherExclude": 
+    {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/acc": true,
+        "**/config": true,
+        "**/devops": true,
+        "**/dox": true,
+        "**/metrics": true,
+        "**/pita": true,
+        "**/plans": true,
+        "**/plc": true,
+        "**/python_tests": true,
+        "**/Recovery drive": true,
+        "**/scm": true,
+        "**/scmlib": true,
+        "**/test_fixtures": true,
+        "**/testing": true,
+        "**/tests": true,
+        "**/tools": true,
+        "**/tws": true,
+        "**/valet": true,
+    },
+    "autoDocstring.docstringFormat": "sphinx",
+    "autoDocstring.startOnNewLine": true,
+    "terminal.integrated.scrollback": 10000,
+    "diffEditor.renderSideBySide": false,
+
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": ["--max-line-length", "120"],
+    "python.formatting.blackArgs": ["--line-length", "120"],
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{based_on_style: pep8, column_limit: 120}"
+    ],
+
+    "python.linting.enabled": true,
+    "python.linting.maxNumberOfProblems": 1000,
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py"
+    ],
+
+    "python.linting.pylintEnabled": false,
+
+    "python.linting.pylamaEnabled": false,
+    "python.linting.pylamaPath": "pylama",
+    "python.linting.pylamaArgs": [
+        "--ignore=E501",
+        "--concurrent",
+    ],
+
+    "python.linting.banditEnabled": true,
+
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E501,E402,E241",
+    ],
+
+    "python.linting.pydocstyleEnabled": true,
+    "jupyter.sendSelectionToInteractiveWindow": false,
+    "jupyter.enableAutoMoveToNextCell": false,
+    "jupyter.askForKernelRestart": false,
+}

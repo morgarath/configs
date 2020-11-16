@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run",
+            "type": "python",
+            "request": "launch",
+            "program": "BASE_PATH/${relativeFileDirname}/${fileBasename}",
+            "cwd": "CWD",
+            "console": "integratedTerminal",
+            "args": [
+                "--run_list", "${selectedText}",
+            ],
+            "sudo": true,
+            "envFile": "ENVPATH/.env",
+            "preLaunchTask": "update",
+            "justMyCode": false,
+            "stopOnEntry": true
+        },
+    ]
+}
