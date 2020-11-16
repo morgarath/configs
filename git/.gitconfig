@@ -1,6 +1,6 @@
 [user]
     name = jakubfil
-    email = jakub.filip@intel.com
+    email = jakub.filip
 [core]
     editor = vim
     autocrlf = false
