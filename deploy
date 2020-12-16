@@ -1,0 +1,20 @@
+#!/bin/bash
+
+run () {
+	cmd=$1
+	echo "> $cmd"
+	`$cmd`
+}
+
+echo Deploying vim configuration..
+run "rsync -r ./vim/.vim/ $HOME/.vim"
+
+echo Deploying neovim configuration..
+run "cp ./nvim/init.vim $HOME/.config/nvim/"
+
+echo Deploying git configuration..
+run "cp ./git/.gitconfig $HOME/"
+
+echo Deploying bash configuration..
+run "cp ./bash/.bash_aliases $HOME/"
+

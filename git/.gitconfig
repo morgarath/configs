@@ -1,8 +1,8 @@
 [user]
-    name = jakubfil
-    email = jakub.filip
+    name = jakub.filip
+    email = kubfil7@gmail.com
 [core]
-    editor = vim
+    editor = nvim
     autocrlf = false
     hooksPath = githooks
     whitespace = cr-at-eol
@@ -17,61 +17,63 @@
     keepBackup = false
 [alias]
     # STATUS
-    stat = status
     st = status
     
     # LOG
     l = log --graph --abbrev-commit --decorate
-    l1 = log -1 -p
-    l2 = log -2 -p
-    l3 = log -3 -p
-    l4 = log -4 -p
-    l5 = log -5 -p
-    tree = log --graph --abbrev-commit --decorate --date=relative --all
-    treec = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lp1 = log -1 -p
+    lp2 = log -2 -p
+    lp3 = log -3 -p
+    lp4 = log -4 -p
+    lp5 = log -5 -p
+    l1 = log -1
+    l2 = log -2
+    l3 = log -3
+    l4 = log -4
+    l5 = log -5 
+    t = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     in = !git fetch && git log --pretty=oneline --abbrev-commit --graph ..@{u}
     out = log --pretty=oneline --abbrev-commit --graph @{u}..
-    sum = summary = show -s
     root = rev-parse --show-toplevel
-    
+
     # WORKFLOW
+    sh = show
+    shs = show -s
     f = fetch
     m = merge
-    mi = merge origin/integration
-    p = pull
-    pi = pull origin integration
+    a = add
+    aa = add .
+    moi = merge origin/integration
+    pl = pull
+    poi = pull origin integration
     co = checkout
     coi = checkout origin/integration
-    cor = checkout -t
-    ci = commit
-    ps = push
-    pu = push
-    
+    cot = checkout -t
+    c = commit
+    ca = commit --amend
+    p = push 
+    pu = push --set-upstream origin
+
     # WORKING TREE
     unstage = reset HEAD --
+    rh = reset HEAD --
     
     # BRANCH
-    br = branch
+    b = branch
     # Delete all local branches but master and the current one.
-    brcl = "!f(){\
+    bc = "!f(){\
         git branch | grep -v "master" | grep -v ^* | xargs git branch -D;\
     }; f"
-    br-clean = "!f(){\
-        git branch | grep -v "master" | grep -v ^* | xargs git branch -D;\
-    }; f"
-    
+   
     # CONFIG
-    alls = config --global --list
-    al-list = config --global --list
-    cfed = config --global --edit
-    cf = config --global
-    ce = config --edit
-    c = config
+    cfgl = config --global --list
+    cfge = config --global --edit
+    cfg = config --global
+    cfe = config --edit
+    cf = config
         
     # TOOLS
     dt = difftool --dir-diff
-    dif = diff
+    d = diff
     mt = mergetool	
-    
-    # NEW
-    fetch = fetch
+
